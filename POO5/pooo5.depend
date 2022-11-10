@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1667488620 source:c:\users\leonard\desktop\imgoingforthetokensteve\5steve\garantie.cpp
+	"Garantie.h"
+
+1667488620 c:\users\leonard\desktop\imgoingforthetokensteve\5steve\garantie.h
+	<iostream>
+	<cstring>
+
+1667489067 source:c:\users\leonard\desktop\imgoingforthetokensteve\5steve\main.cpp
+	"Produs.h"
+
+1667489300 c:\users\leonard\desktop\imgoingforthetokensteve\5steve\produs.h
+	<iostream>
+	<cstring>
+	"Garantie.h"
+
+1667489456 source:c:\users\leonard\desktop\imgoingforthetokensteve\5steve\produs.cpp
+	"Produs.h"
+
+1667489880 source:c:\users\leonard\desktop\poo\poo lab\5steve\garantie.cpp
+	"Garantie.h"
+
+1667488620 c:\users\leonard\desktop\poo\poo lab\5steve\garantie.h
+	<iostream>
+	<cstring>
+
+1667489827 source:c:\users\leonard\desktop\poo\poo lab\5steve\main.cpp
+	"Produs.h"
+	<fstream>
+
+1667489300 c:\users\leonard\desktop\poo\poo lab\5steve\produs.h
+	<iostream>
+	<cstring>
+	"Garantie.h"
+
+1667489673 source:c:\users\leonard\desktop\poo\poo lab\5steve\produs.cpp
+	"Produs.h"
+
+1667489880 source:c:\users\leonard\desktop\poo\poo lab\poo5\garantie.cpp
+	"Garantie.h"
+
+1667488620 c:\users\leonard\desktop\poo\poo lab\poo5\garantie.h
+	<iostream>
+	<cstring>
+
+1667489827 source:c:\users\leonard\desktop\poo\poo lab\poo5\main.cpp
+	"Produs.h"
+	<fstream>
+
+1667489300 c:\users\leonard\desktop\poo\poo lab\poo5\produs.h
+	<iostream>
+	<cstring>
+	"Garantie.h"
+
+1667489673 source:c:\users\leonard\desktop\poo\poo lab\poo5\produs.cpp
+	"Produs.h"
+

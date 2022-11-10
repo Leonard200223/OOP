@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1666280618 source:c:\users\leonard\desktop\poo\poo lab\poo2\main.cpp
+	<iostream>
+	<cstring>
+	"Angajat.h"
+
+1666281072 c:\users\leonard\desktop\poo\poo lab\poo2\angajat.h
+
+1666280938 source:c:\users\leonard\desktop\poo\poo lab\poo2\angajat.cpp
+	<iostream>
+	<cstring>
+	"Angajat.h"
+

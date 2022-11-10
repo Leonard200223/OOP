@@ -1,0 +1,13 @@
+3
+5000
+MSI
+36
+Depanero
+4500
+Asus
+6
+AsusTeam
+7000
+Lenovo
+24
+SerVice

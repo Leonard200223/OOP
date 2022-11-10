@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1666879804 source:c:\users\leonard\desktop\poo\poo lab\poo4\main.cpp
+	"MyString.h"
+	<fstream>
+
+1666881761 source:c:\users\leonard\desktop\poo\poo lab\poo4\mystring.cpp
+	"MyString.h"
+
+1666879506 c:\users\leonard\desktop\poo\poo lab\poo4\mystring.h
+	<iostream>
+	<cstring>
+

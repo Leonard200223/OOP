@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1668095898 source:c:\users\leonard\desktop\poo\poo lab\poo6\main.cpp
+	"TV.h"
+
+1668095466 source:c:\users\leonard\desktop\poo\poo lab\poo6\produs.cpp
+	"Produs.h"
+
+1668095466 c:\users\leonard\desktop\poo\poo lab\poo6\produs.h
+	<iostream>
+	<string.h>
+
+1668095960 source:c:\users\leonard\desktop\poo\poo lab\poo6\tv.cpp
+	"TV.h"
+
+1668091573 c:\users\leonard\desktop\poo\poo lab\poo6\electrocasnic.h
+	"Produs.h"
+
+1668094122 source:c:\users\leonard\desktop\poo\poo lab\poo6\electrocasnic.cpp
+	"Electrocasnic.h"
+
+1668095824 c:\users\leonard\desktop\poo\poo lab\poo6\tv.h
+	"Electrocasnic.h"
+
