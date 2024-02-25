@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1670516825 source:c:\users\leonard\desktop\poo\poo lab\poo9\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<string.h>
+

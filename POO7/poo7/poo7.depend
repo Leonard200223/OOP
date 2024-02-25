@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1668699017 source:c:\users\leonard\desktop\poo\poo lab\poo7\poo7\main.cpp
+	"Teren.h"
+
+1668697231 source:c:\users\leonard\desktop\poo\poo lab\poo7\poo7\src\teren.cpp
+	"Teren.h"
+
+1668698608 c:\users\leonard\desktop\poo\poo lab\poo7\poo7\include\teren.h
+	<Imobil.h>
+
+1668698597 c:\users\leonard\desktop\poo\poo lab\poo7\poo7\include\proprietate.h
+	<iostream>
+	<cstring>
+
+1668698076 source:c:\users\leonard\desktop\poo\poo lab\poo7\poo7\src\imobil.cpp
+	"Imobil.h"
+
+1668698597 c:\users\leonard\desktop\poo\poo lab\poo7\poo7\include\imobil.h
+	<Proprietate.h>
+
+1668698753 source:c:\users\leonard\desktop\poo\poo lab\poo7\poo7\src\proprietate.cpp
+	"Proprietate.h"
+

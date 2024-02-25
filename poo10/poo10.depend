@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1514140574 source:c:\users\leonard\desktop\poo\poo lab\poo10\main.cpp
+	<iostream>
+
+1671118666 source:c:\users\leonard\desktop\poo\poo lab\poo10\vector.cpp
+	<assert.h>
+	<iostream>
+	<string>
+	<fstream>
+

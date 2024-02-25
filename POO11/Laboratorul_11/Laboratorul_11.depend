@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1671630749 source:d:\facultate\poo\laboratorul_11\main.cpp
+	"PM.h"
+	<fstream>
+
+1671575108 source:d:\facultate\poo\laboratorul_11\ps.cpp
+	"PS.h"
+
+1671570356 d:\facultate\poo\laboratorul_11\ps.h
+	"Produs.h"
+
+1671630896 d:\facultate\poo\laboratorul_11\produs.h
+	<iostream>
+	<string>
+	<algorithm>
+	<vector>
+
+1671570535 source:d:\facultate\poo\laboratorul_11\produs.cpp
+	"Produs.h"
+
+1671573015 d:\facultate\poo\laboratorul_11\pm.h
+	"PS.h"
+	"MH.h"
+
+1671571691 d:\facultate\poo\laboratorul_11\mh.h
+	"Produs.h"
+	"Piesa.h"
+
+1671571521 d:\facultate\poo\laboratorul_11\piesa.h
+	"Produs.h"
+
+1671631757 source:d:\facultate\poo\laboratorul_11\mh.cpp
+	"MH.h"
+
+1671575108 source:d:\facultate\poo\laboratorul_11\piesa.cpp
+	"Piesa.h"
+
+1671575108 source:d:\facultate\poo\laboratorul_11\pm.cpp
+	"PM.h"
+

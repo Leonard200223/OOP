@@ -1,0 +1,247 @@
+#include <assert.h>
+#include <iostream>
+#include <string>
+#include<fstream>
+using namespace std;
+template <typename T>
+class vector
+{ int dim;
+  T* buf;
+  public:
+     vector();
+     vector(int , T*);
+     vector(const vector&);
+     vector & operator=(const vector &);
+     ~vector();
+	 T& operator[](int i);
+     int getDim();
+
+	 friend ostream & operator << (ostream & dev,  vector & v)
+     {
+	    dev << "Vector:" <<endl;
+	    dev << "Nr Elem:" << v.dim << endl;
+	    if (v.buf!=NULL)
+	    for(int i = 0; i < v.dim; i++) {
+		   dev << v.buf[i];//am nevoie de op<< pt T
+		   if(i < v.dim-1)
+		    	dev << ";   ";
+		   else
+		    	dev << "." << endl;
+		}
+        dev<<endl;
+	    return dev;
+     }
+
+	void addElem(int, const T&  );// - adauga element T pe pozitia i - cu realocare
+	void removeElem(int  ); // sterge elementul de pe pozitia i cu realocare
+	int repetitii(const T&); // returneaza de cate ori apare obiectul dat ca parametru in buf
+    T& max();//returneaza obiectul cu valoare maxima
+    void inlocuire(const T&,const T&);//inlocuieste obiectul din buf egal cu param1 cu param2
+
+};
+
+template <typename T>
+vector<T>::vector( ){
+	dim=0;
+	buf=NULL;
+}
+
+template <typename T>
+vector<T>::vector(int d, T*b){
+       dim=d;
+       if (b==NULL) buf = NULL;
+	   else{
+	      buf=new T[dim]; //constr fara param in T
+          for (int i=0;i<dim;i++)
+            buf[i]=b[i]; //op= in T
+        }
+     }
+
+
+template <typename T>
+vector<T>::vector(const vector<T>& v){
+       dim=v.dim;
+       if (v.buf==NULL) buf=NULL;
+       else{
+	      buf=new T[dim]; //constr fara param in T
+          for (int i=0;i<dim;i++)
+             buf[i]=v.buf[i]; //op= in T
+        }
+	 }
+
+
+template <typename T>
+vector<T>::~vector(){
+        delete [] buf; //destr in T
+}
+
+template <typename T>
+vector<T>&  vector<T>::operator=(const vector &v){
+       dim=v.dim;
+       if (buf!=NULL) delete [] buf; //destr in T
+       if (v.buf==NULL) buf=NULL;
+       else{
+	      buf=new T[dim]; //constr fara param in T
+          for (int i=0;i<dim;i++)
+             buf[i]=v.buf[i]; //op= in T
+		}
+        return *this;
+}
+
+template <typename T>
+T& vector<T>::operator[](int i){
+      assert ((i>-1 && i<dim));
+	  return buf[i];  //constr de copiere in T
+}
+
+template <typename T>
+int vector<T>::getDim(){
+   return dim;
+}
+
+template<class T>
+int vector<T>::repetitii(const T& x){
+    int numar_repetitii=0;
+    int i;
+    for(i=0; i<dim; i++){
+        if(buf[i]==x)numar_repetitii++;
+    }
+    return numar_repetitii;
+}
+
+template<class T>
+T& vector<T>::max(){
+    T maxim=buf[0];
+    int poz_max;
+    poz_max=0;
+    for(int i=1; i<dim; i++){
+        if(maxim<buf[i]){poz_max=i;
+                        maxim=buf[poz_max];}
+    }
+    return buf[poz_max];
+}
+
+template <class T>
+void vector<T>::inlocuire(const T& x, const T& y){
+    int i;
+    for(i=0; i<dim; i++){
+        if(buf[i]==x){
+            buf[i]=y;
+        }
+    }
+}
+
+template <class T>
+void vector<T>::addElem(int pozitie, const T& x){
+    int dim_aux=dim+1;
+    T* buf_aux=new T[dim_aux];
+    int i;
+    for(i=0; i<dim; i++){
+        buf_aux[i]=buf[i];
+    }
+    for(i=dim_aux-1; i>pozitie; i--)buf_aux[i]=buf_aux[i-1];
+    buf_aux[i]=x;
+    delete[] buf;
+    dim=dim_aux;
+    buf=new T[dim];
+    for(i=0; i<dim; i++)
+        buf[i]=buf_aux[i];
+
+}
+
+template<class T>
+void vector<T>::removeElem(int pozitie){
+    int dim_aux=dim;
+    T* buf_aux=new T[dim_aux];
+    int i;
+    for(i=0; i<dim_aux; i++){
+        buf_aux[i]=buf[i];
+    }
+    for(i=pozitie; i<dim_aux-1; i++)
+        buf_aux[i]=buf_aux[i+1];
+    delete [] buf;
+    dim=dim_aux-1;
+    buf=new T [dim];
+    for(i=0; i<dim; i++)
+        buf[i]=buf_aux[i];
+}
+
+class Persoana
+{ string nume;
+  int varsta;
+public:
+    Persoana( string n = " ", int v = 0):nume(n),varsta(v){};
+    friend ostream& operator<<(ostream &d,const Persoana& x){
+        d<<x.nume<<"  "<<x.varsta;
+        return d;
+    }
+    Persoana(const Persoana &x):nume(x.nume), varsta(x.varsta){};
+    bool operator<(const Persoana&x){
+        if(varsta<x.varsta)return 1;
+        return 0;
+    }
+    bool operator==(const Persoana& x){
+        if(varsta==x.varsta)return 1;
+        return 0;
+    }
+        //ordonarea se va face in fctie de varsta
+};
+
+
+
+int main(){/*
+	 Persoana *b=new Persoana[2];
+	 b[0]=Persoana("Ana",20);
+     b[1]=Persoana("Maria",21);
+	 vector<Persoana> v(2,b);
+     cout<<v;
+
+	 cout<<v[0];
+
+	 v[1]=Persoana("cineva",5);
+     cout<<v;
+
+     vector<Persoana> v1(v);
+     cout<<v1;
+
+     v=v1;
+     cout<<v;
+
+     return 0;
+    */
+     /*string buf[3];
+     buf[1]=buf[2]="Ana";
+     buf[0]="Leonard";
+     vector <string> x(3,buf);
+     cout<<x;
+     ofstream f("date.txt", ios::out);
+     f<<x;
+     cout<<x.repetitii("Ana")<<endl;
+     cout<<x.max()<<endl;
+     x.inlocuire("Ana", "Ema");
+     cout<<x;*/
+
+     Persoana *b=new Persoana[3];
+     b[0]=Persoana("Ana", 20);
+     b[1]=Persoana ("Maria", 21);
+     b[2]=Persoana("Leonard", 19); //ATENTIE
+     vector<Persoana> v(3,b);
+     cout<<v;
+
+     cout<<v.repetitii(b[0])<<endl;
+
+     cout<<v.max()<<endl;
+     v.inlocuire(Persoana("Maria", 21), Persoana("Emma", 20));
+
+     cout<<v<<endl;
+
+     v.addElem(1, Persoana("Lucas", 23));
+
+     cout<<v<<endl;
+
+     v.removeElem(0);
+
+     cout<<v<<endl;
+}
+
+

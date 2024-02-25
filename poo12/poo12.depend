@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1673538341 source:c:\users\leonard\desktop\poo\poo lab\poo12\main.cpp
+	<iostream>
+	"Artist.h"
+	"Album.h"
+	"Track.h"
+
+1673538762 c:\users\leonard\desktop\poo\poo lab\poo12\artist.h
+	<iostream>
+	<map>
+	<string>
+	"Album.h"
+
+1673538369 c:\users\leonard\desktop\poo\poo lab\poo12\album.h
+	"Track.h"
+	<iostream>
+	<string>
+	<set>
+
+1673535503 c:\users\leonard\desktop\poo\poo lab\poo12\track.h
+	<iostream>
+	<string>
+

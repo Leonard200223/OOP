@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1669302505 source:c:\users\leonard\desktop\poo\poo lab\poo8\combina.cpp
+	"Combina.h"
+
+1669300108 source:c:\users\leonard\desktop\poo\poo lab\poo8\frigider.cpp
+	"Frigider.h"
+
+1669302468 source:c:\users\leonard\desktop\poo\poo lab\poo8\lada_frig.cpp
+	"Lada_Frig.h"
+
+1669303384 source:c:\users\leonard\desktop\poo\poo lab\poo8\main.cpp
+	"Combina.h"
+
+1669299915 source:c:\users\leonard\desktop\poo\poo lab\poo8\produs.cpp
+	"Produs.h"
+
+1669301206 c:\users\leonard\desktop\poo\poo lab\poo8\produs.h
+	<iostream>
+	<cstring>
+
+1669301746 c:\users\leonard\desktop\poo\poo lab\poo8\frigider.h
+	"Produs.h"
+
+1669301223 c:\users\leonard\desktop\poo\poo lab\poo8\lada_frig.h
+	"Frigider.h"
+
+1669302128 c:\users\leonard\desktop\poo\poo lab\poo8\combina.h
+	"Lada_Frig.h"
+

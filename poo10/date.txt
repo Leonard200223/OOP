@@ -1,0 +1,4 @@
+Vector:
+Nr Elem:3
+Leonard;   Ana;   Ana.
+

@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1665675037 source:c:\users\leonard\desktop\poo lab\poo1\main.cpp
+	<iostream>
+	<string.h>
+	"lab1.h"
+
+1665673456 c:\users\leonard\desktop\poo lab\poo1\lab1.h
+
+1665674204 source:c:\users\leonard\desktop\poo lab\poo1\lab1.cpp
+	<iostream>
+	<cstring>
+	"lab1.h"
+
+1666253619 source:c:\users\leonard\desktop\poo\poo lab\poo1\main.cpp
+	<iostream>
+	<string.h>
+	"lab1.h"
+
+1665673456 c:\users\leonard\desktop\poo\poo lab\poo1\lab1.h
+
+1666253239 source:c:\users\leonard\desktop\poo\poo lab\poo1\lab1.cpp
+	<iostream>
+	<cstring>
+	"lab1.h"
+
